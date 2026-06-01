@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free AI Implementation Survey — Find out which AI tools could save your manufacturing business the most time and money.">
+  <title>Free AI Audit Survey — Keltek Design</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="survey-page">
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="index.html" class="nav-logo">KELTEK<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <a href="index.html" class="nav-cta">← Back to Site</a>
+</nav>
+
+<!-- SURVEY HERO -->
+<div class="survey-hero">
+  <p class="section-label">Free AI Audit · 5 Minutes</p>
+  <h1>Find Your<br><em>AI Advantage.</em></h1>
+  <p>Answer 15 questions about how your business operates. We'll identify your highest-value AI opportunity and send one free recommendation directly to your inbox.</p>
+</div>
+
+<!-- SURVEY FORM -->
+<div class="survey-form-wrap">
+  <form
+    name="ai-audit-survey"
+    method="POST"
+    action="/thank-you.html"
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+  >
+
+    <!-- Honeypot (hidden from humans) -->
+    <p style="display:none;">
+      <label>Don't fill this out: <input name="bot-field"></label>
+    </p>
+    <input type="hidden" name="form-name" value="ai-audit-survey">
+
+    <!-- SECTION 1: ABOUT YOUR BUSINESS -->
+    <p class="form-section-title">Your Business</p>
+    <p class="form-section-sub">Help us understand your operation before we make recommendations.</p>
+
+    <div class="form-group">
+      <label class="form-label" for="company">Company Name <span>*</span></label>
+      <input class="form-input" type="text" id="company" name="company" placeholder="Acme Thermoforming, Inc." required>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="contact-name">Your Name <span>*</span></label>
+      <input class="form-input" type="text" id="contact-name" name="contact-name" placeholder="Jane Smith" required>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="role">Your Role</label>
+      <input class="form-input" type="text" id="role" name="role" placeholder="Owner, Operations Manager, Engineer...">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="employees">How many employees do you have?</label>
+      <select class="form-select" id="employees" name="employees">
+        <option value="" disabled selected>Select range</option>
+        <option>1 – 5</option>
+        <option>6 – 15</option>
+        <option>16 – 50</option>
+        <option>51 – 150</option>
+        <option>150+</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="primary-product">What is your primary product or service?</label>
+      <input class="form-input" type="text" id="primary-product" name="primary-product" placeholder="e.g. Thermoformed food packaging, industrial trays...">
+    </div>
+
+    <hr class="form-divider">
+
+    <!-- SECTION 2: TIME & OPERATIONS -->
+    <p class="form-section-title">Time & Operations</p>
+    <p class="form-section-sub">Where does your team's time actually go?</p>
+
+    <div class="form-group">
+      <label class="form-label">How many hours per week does your team spend on customer emails and communication?</label>
+      <div class="form-radio-group">
+        <label class="form-radio-label"><input type="radio" name="email-hours" value="Less than 2 hours"> Less than 2 hours</label>
+        <label class="form-radio-label"><input type="radio" name="email-hours" value="2–5 hours"> 2–5 hours</label>
+        <label class="form-radio-label"><input type="radio" name="email-hours" value="5–10 hours"> 5–10 hours</label>
+        <label class="form-radio-label"><input type="radio" name="email-hours" value="10+ hours"> 10+ hours — it's a real problem</label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">How long does a typical customer quote take from inquiry to delivery?</label>
+      <div class="form-radio-group">
+        <label class="form-radio-label"><input type="radio" name="quote-time" value="Same day"> Same day</label>
+        <label class="form-radio-label"><input type="radio" name="quote-time" value="1–3 days"> 1–3 days</label>
+        <label class="form-radio-label"><input type="radio" name="quote-time" value="3–7 days"> 3–7 days</label>
+        <label class="form-radio-label"><input type="radio" name="quote-time" value="Over a week"> Over a week</label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">How do you currently handle incoming customer spec sheets and drawings?</label>
+      <div class="form-radio-group">
+        <label class="form-radio-label"><input type="radio" name="spec-handling" value="Email inbox, manually organized"> Email inbox, manually organized</label>
+        <label class="form-radio-label"><input type="radio" name="spec-handling" value="Shared drive or folder system"> Shared drive or folder system</label>
+        <label class="form-radio-label"><input type="radio" name="spec-handling" value="Project management software"> Project management software (Asana, Monday, etc.)</label>
+        <label class="form-radio-label"><input type="radio" name="spec-handling" value="Honestly, it's a mess"> Honestly, it's a bit of a mess</label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">How do you currently track leads and follow-ups with potential customers?</label>
+      <div class="form-radio-group">
+        <label class="form-radio-label"><input type="radio" name="crm" value="CRM software (HubSpot, Salesforce, etc.)"> CRM software (HubSpot, Salesforce, etc.)</label>
+        <label class="form-radio-label"><input type="radio" name="crm" value="Spreadsheet"> Spreadsheet</label>
+        <label class="form-radio-label"><input type="radio" name="crm" value="Email and memory"> Email and memory</label>
+        <label class="form-radio-label"><input type="radio" name="crm" value="We don't really track leads formally"> We don't really track leads formally</label>
+      </div>
+    </div>
+
+    <hr class="form-divider">
+
+    <!-- SECTION 3: DESIGN & ENGINEERING TASKS -->
+    <p class="form-section-title">Design & Engineering</p>
+    <p class="form-section-sub">Understanding your technical workflows helps us pinpoint the best automation opportunities.</p>
+
+    <div class="form-group">
+      <label class="form-label">How many new part designs or design revisions do you handle per month?</label>
+      <div class="form-radio-group">
+        <label class="form-radio-label"><input type="radio" name="design-volume" value="1–5"> 1–5</label>
+        <label class="form-radio-label"><input type="radio" name="design-volume" value="6–15"> 6–15</label>
+        <label class="form-radio-label"><input type="radio" name="design-volume" value="16–30"> 16–30</label>
+        <label class="form-radio-label"><input type="radio" name="design-volume" value="30+"> 30+</label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Do you have a formal DFM (Design for Manufacturability) review process?</label>
+      <div class="form-radio-group">
+        <label class="form-radio-label"><input type="radio" name="dfm" value="Yes, documented and consistent"> Yes — documented and consistent</label>
+        <label class="form-radio-label"><input type="radio" name="dfm" value="Informal, relies on experience"> Informal — relies on experience</label>
+        <label class="form-radio-label"><input type="radio" name="dfm" value="Not really"> Not really</label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Which software does your team currently use? <span>(select all that apply)</span></label>
+      <div class="form-check-group">
+        <label class="form-check-label"><input type="checkbox" name="software" value="SolidWorks"> SolidWorks</label>
+        <label class="form-check-label"><input type="checkbox" name="software" value="Fusion 360"> Fusion 360</label>
+        <label class="form-check-label"><input type="checkbox" name="software" value="Autodesk Inventor"> Autodesk Inventor</label>
+        <label class="form-check-label"><input type="checkbox" name="software" value="MasterCAM"> MasterCAM</label>
+        <label class="form-check-label"><input type="checkbox" name="software" value="AutoCAD"> AutoCAD</label>
+        <label class="form-check-label"><input type="checkbox" name="software" value="Microsoft Office / Google Workspace"> Office / Google Workspace</label>
+        <label class="form-check-label"><input type="checkbox" name="software" value="QuickBooks / accounting software"> QuickBooks / accounting</label>
+        <label class="form-check-label"><input type="checkbox" name="software" value="None of the above"> None of the above</label>
+      </div>
+    </div>
+
+    <hr class="form-divider">
+
+    <!-- SECTION 4: PAIN POINTS -->
+    <p class="form-section-title">Your Biggest Challenges</p>
+    <p class="form-section-sub">This is where the real insight lives.</p>
+
+    <div class="form-group">
+      <label class="form-label">What is your single biggest operational bottleneck right now?</label>
+      <div class="form-radio-group">
+        <label class="form-radio-label"><input type="radio" name="bottleneck" value="Getting quotes out fast enough"> Getting quotes out fast enough</label>
+        <label class="form-radio-label"><input type="radio" name="bottleneck" value="Following up with leads consistently"> Following up with leads consistently</label>
+        <label class="form-radio-label"><input type="radio" name="bottleneck" value="Managing customer communication volume"> Managing customer communication volume</label>
+        <label class="form-radio-label"><input type="radio" name="bottleneck" value="Finding and onboarding new customers"> Finding and onboarding new customers</label>
+        <label class="form-radio-label"><input type="radio" name="bottleneck" value="Design revision cycles taking too long"> Design revision cycles taking too long</label>
+        <label class="form-radio-label"><input type="radio" name="bottleneck" value="Internal documentation and knowledge management"> Internal documentation and knowledge management</label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Which tasks do you wish you could automate or eliminate? <span>(select up to 3)</span></label>
+      <div class="form-check-group">
+        <label class="form-check-label"><input type="checkbox" name="automate" value="Writing customer emails"> Writing customer emails</label>
+        <label class="form-check-label"><input type="checkbox" name="automate" value="Generating quotes"> Generating quotes</label>
+        <label class="form-check-label"><input type="checkbox" name="automate" value="Scheduling and follow-ups"> Scheduling / follow-ups</label>
+        <label class="form-check-label"><input type="checkbox" name="automate" value="Organizing specs and drawings"> Organizing specs &amp; drawings</label>
+        <label class="form-check-label"><input type="checkbox" name="automate" value="Social media or marketing content"> Social media / marketing</label>
+        <label class="form-check-label"><input type="checkbox" name="automate" value="Invoicing and payments"> Invoicing &amp; payments</label>
+        <label class="form-check-label"><input type="checkbox" name="automate" value="Reporting and analytics"> Reporting &amp; analytics</label>
+        <label class="form-check-label"><input type="checkbox" name="automate" value="Training new employees"> Training new employees</label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Has your business experimented with AI tools yet?</label>
+      <div class="form-radio-group">
+        <label class="form-radio-label"><input type="radio" name="ai-experience" value="Yes, we use AI tools regularly"> Yes — we use AI tools regularly</label>
+        <label class="form-radio-label"><input type="radio" name="ai-experience" value="We've tried a few things but nothing stuck"> We've tried a few things but nothing stuck</label>
+        <label class="form-radio-label"><input type="radio" name="ai-experience" value="Not yet, but we're interested"> Not yet, but we're interested</label>
+        <label class="form-radio-label"><input type="radio" name="ai-experience" value="Not yet and honestly skeptical"> Not yet and honestly skeptical</label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="free-answer">If you could wave a wand and fix one thing about how your business runs, what would it be?</label>
+      <p class="form-sub">Be as specific or as vague as you like. This often reveals the best AI opportunity.</p>
+      <textarea class="form-textarea" id="free-answer" name="free-answer" placeholder="e.g. I spend 3 hours every Monday morning responding to the same questions from customers..."></textarea>
+    </div>
+
+    <hr class="form-divider">
+
+    <!-- EMAIL CAPTURE -->
+    <div class="email-capture">
+      <h3>Where Should We Send Your Free Recommendation?</h3>
+      <p>We'll analyze your answers and send you the single highest-impact AI recommendation for your business — completely free. No sales pitch, no obligation. The rest of your full audit will be available to unlock.</p>
+
+      <div class="form-group">
+        <label class="form-label" for="email">Business Email <span>*</span></label>
+        <input class="form-input" type="email" id="email" name="email" placeholder="you@yourbusiness.com" required>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="website">Your Website <span style="color:var(--muted); font-weight:300;">(optional)</span></label>
+        <input class="form-input" type="url" id="website" name="website" placeholder="https://www.yourbusiness.com">
+      </div>
+    </div>
+
+    <div class="form-submit-row">
+      <button type="submit" class="form-submit">Send Me My Free AI Recommendation →</button>
+      <p class="form-disclaimer">Your information is never sold or shared. You'll receive one email with your recommendation. Nathan reviews every submission personally.</p>
+    </div>
+
+  </form>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 Keltek Design, LLC — All Rights Reserved.</p>
+    <p class="footer-made"><a href="index.html" style="color:var(--muted);">← Back to keltekdesign.com</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
