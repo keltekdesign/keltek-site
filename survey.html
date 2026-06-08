@@ -32,16 +32,13 @@
   <form
     name="ai-audit-survey"
     method="POST"
-    action="/thank-you.html"
-    data-netlify="true"
-    netlify-honeypot="bot-field"
+    action="https://api.web3forms.com/submit"
   >
 
-    <!-- Honeypot (hidden from humans) -->
-    <p style="display:none;">
-      <label>Don't fill this out: <input name="bot-field"></label>
-    </p>
-    <input type="hidden" name="form-name" value="ai-audit-survey">
+    <input type="hidden" name="access_key" value="c54c7c34-8416-42c8-aa02-d0067a5d4dd8">
+    <input type="hidden" name="subject" value="New AI Audit Survey — Keltek Design">
+    <input type="hidden" name="redirect" value="https://www.keltekdesign.com/thank-you.html">
+    <input type="checkbox" name="botcheck" style="display:none;">
 
     <!-- SECTION 1: ABOUT YOUR BUSINESS -->
     <p class="form-section-title">Your Business</p>
