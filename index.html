@@ -232,8 +232,49 @@
   </div>
 </section>
 
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="contact-left">
+      <p class="section-label">Get In Touch</p>
+      <h2 class="section-title">Let's Talk<br><em>About Your<br>Project.</em></h2>
+      <div class="contact-details">
+        <p><span class="contact-detail-label">Phone</span><span>(864) 531-2342</span></p>
+        <p><span class="contact-detail-label">Email</span><span>keltekdesign@gmail.com</span></p>
+        <p><span class="contact-detail-label">Location</span><span>Simpsonville, SC 29681</span></p>
+      </div>
+    </div>
+    <div class="contact-right">
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="c54c7c34-8416-42c8-aa02-d0067a5d4dd8">
+        <input type="hidden" name="subject" value="New Contact Inquiry — Keltek Design">
+        <input type="hidden" name="redirect" value="https://www.keltekdesign.com/thank-you.html">
+        <input type="checkbox" name="botcheck" style="display:none;">
+
+        <div class="form-group">
+          <label class="form-label" for="c-name">Name <span>*</span></label>
+          <input class="form-input" type="text" id="c-name" name="name" placeholder="Jane Smith" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="c-email">Email <span>*</span></label>
+          <input class="form-input" type="email" id="c-email" name="email" placeholder="you@yourbusiness.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="c-phone">Phone <span style="color:var(--muted);font-weight:300;">(optional)</span></label>
+          <input class="form-input" type="tel" id="c-phone" name="phone" placeholder="(864) 555-0100">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="c-message">Message <span>*</span></label>
+          <textarea class="form-textarea" id="c-message" name="message" placeholder="Tell us about your project..." required></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send Message →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
-<footer class="footer" id="contact">
+<footer class="footer">
   <div class="footer-top">
     <div class="footer-brand">
       <img src="logo.jpg" alt="Keltek Design" class="footer-logo-img">
