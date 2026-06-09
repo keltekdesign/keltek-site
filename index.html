@@ -302,18 +302,34 @@
   </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
 (function () {
+  emailjs.init({ publicKey: '-5ZeA1CLxNmD4u8t5' });
   var form = document.querySelector('form[name="contact"]');
-  var webhook = 'https://hook.us2.make.com/bnfwqm4ho848y4or5gkrlyhi6z4tss8t';
   var redirect = 'https://www.keltekdesign.com/contact-thank-you.html';
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    var params = new URLSearchParams();
-    new FormData(form).forEach(function (val, key) { params.append(key, val); });
-    fetch(webhook, { method: 'POST', mode: 'no-cors', body: params })
-      .then(function () { window.location.href = redirect; })
-      .catch(function () { window.location.href = redirect; });
+    var data = {};
+    new FormData(form).forEach(function (val, key) {
+      data[key] = data[key] ? data[key] + ', ' + val : val;
+    });
+    var body = [
+      'Name: '    + (data.name    || ''),
+      'Email: '   + (data.email   || ''),
+      'Phone: '   + (data.phone   || 'Not provided'),
+      '',
+      'Message:',
+      data.message || ''
+    ].join('\n');
+    emailjs.send('service_y19jddc', 'template_f9a2ktx', {
+      subject: 'New Contact Inquiry — Keltek Design',
+      body: body
+    }).then(function () {
+      window.location.href = redirect;
+    }).catch(function () {
+      window.location.href = redirect;
+    });
   });
 }());
 </script>
