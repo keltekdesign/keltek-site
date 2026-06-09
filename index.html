@@ -245,12 +245,7 @@
       </div>
     </div>
     <div class="contact-right">
-      <form action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="c54c7c34-8416-42c8-aa02-d0067a5d4dd8">
-        <input type="hidden" name="subject" value="New Contact Inquiry — Keltek Design">
-        <input type="hidden" name="redirect" value="https://www.keltekdesign.com/thank-you.html">
-        <input type="hidden" name="webhook" value="https://hook.us2.make.com/5rego0oqcgkrki7gojl23hek58gokffy">
-        <input type="checkbox" name="botcheck" style="display:none;">
+      <form name="contact" method="POST" action="#">
 
         <div class="form-group">
           <label class="form-label" for="c-name">Name <span>*</span></label>
@@ -307,5 +302,20 @@
   </div>
 </footer>
 
+<script>
+(function () {
+  var form = document.querySelector('form[name="contact"]');
+  var webhook = 'https://hook.us2.make.com/5rego0oqcgkrki7gojl23hek58gokffy';
+  var redirect = 'https://www.keltekdesign.com/thank-you.html';
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var params = new URLSearchParams();
+    new FormData(form).forEach(function (val, key) { params.append(key, val); });
+    fetch(webhook, { method: 'POST', mode: 'no-cors', body: params })
+      .then(function () { window.location.href = redirect; })
+      .catch(function () { window.location.href = redirect; });
+  });
+}());
+</script>
 </body>
 </html>
